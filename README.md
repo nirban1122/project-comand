@@ -526,9 +526,18 @@ Styling:
 - Mobile optimized
 
 ```
-### 📄 File Reference
-PHASE ( 3 ) Exercises & Quizzes/2.Quiz System.md
-### 🎯 Engineering Prompt
+CLAUDE WILL GIVE YOU:
+
+> Backend: lesson routes, controllers
+> Frontend: All components above
+> API integration
+> State management
+
+
+
+## PHASE 3: Exercises & Quizzes
+
+###  PROMPT 8: Exercise System
 ```text
 Build the interactive exercise system.
 
@@ -608,10 +617,8 @@ Include:
 - TypeScript types
 - Accessibility features
 ```
-## 📊 PHASE 4: Dashboard & User Profiles
-### 📄 File Reference
-PHASE ( 4 ) Dashboard & User Profile/1.Dashboard System.md
-### 🎯 Engineering Prompt
+
+### PROMPT 9: Quiz System
 ```text
 Build the course quiz/assessment system.
 
@@ -673,9 +680,9 @@ Include:
 - Certificate generation (PDF - optional for MVP)
 - Retry logic
 ```
-### 📄 File Reference
-PHASE ( 4 ) Dashboard & User Profile/2.User Profile.md
-### 🎯 Engineering Prompt
+## PHASE 4: Dashboard & User Profile
+
+### PROMPT 10: Dashboard System
 ```text
 
 Build the user dashboard (home page after login).
@@ -740,10 +747,8 @@ Styling:
 - Mobile responsive
 - Icons and colors for different courses
 ```
-## 🚀 PHASE 5: Deployment & Optimization
-### 📄 File Reference
-PHASE ( 5 ) Deployment & Polish/1.Deploy to Render.md
-### 🎯 Engineering Prompt
+
+### PROMPT 11: User Profile
 ```text
 Build the user profile page.
 
@@ -808,9 +813,9 @@ Include:
 - Loading states
 
 ```
-### 📄 File Reference
-PHASE ( 5 ) Deployment & Polish/2.Performance & Optimization.md
-### 🎯 Engineering Prompt
+### PHASE 5: Deployment & Polish
+
+### PROMPT 12: Deploy to Render
 ```text
 Help me deploy my full-stack German learning app to Render.
 
@@ -851,9 +856,7 @@ My repo structure:
 Provide complete render.yaml and all necessary configs.
 
 ```
-### 📄 File Reference
-PHASE ( 5 ) Deployment & Polish/3.Error Handling & Logging.md
-### 🎯 Engineering Prompt
+### PROMPT 13: Performance & Optimization
 ```text
 
 Review my app for performance issues and provide optimization tips.
@@ -878,10 +881,8 @@ Suggest:
 
 Provide code examples for each optimization.
 ```
-## 🎨 PHASE 6: UI Components
-### 📄 File Reference
-PHASE ( 6 ) UI Components (V0.DEV)/Beautiful UI Components.md
-### 🎯 Engineering Prompt
+
+### PROMPT 14: Error Handling & Logging
 ```text
 Build comprehensive error handling and logging for my app.
 
@@ -929,17 +930,124 @@ Provide:
 - Global error handler
 - TypeScript error types
 ```
-## 🧪 PHASE 7: Testing & Quality Assurance
-### 📄 File Reference
-PHASE ( 7 ) Testing & Quality (GEMINI)/1.Testing Strategy.md
-### 🎯 Engineering Prompt
+## PHASE 6: UI Components (V0.DEV)
+ 
+### PROMPT 15: Beautiful UI Components
 ```text
+Create beautiful React components for my German learning app:
+
+1. HeroSection
+   - Welcome banner
+   - Call to action buttons
+   - Animated background
+   - Mobile responsive
+
+2. CourseCard
+   - Course image/icon
+   - Level badge (A1, A2, etc)
+   - Progress bar
+   - Enrollment button
+   - Stars/rating (optional)
+
+3. LessonCard
+   - Lesson title
+   - Completed checkmark
+   - Difficulty indicator
+   - Preview text
+   - Click to go to lesson
+
+4. ExerciseCard
+   - Exercise title
+   - Type indicator (multiple choice, etc)
+   - Difficulty
+   - XP reward
+   - Status (completed/not attempted)
+
+5. StatCard
+   - Icon + number + label
+   - Animated counter
+   - Color coded
+
+6. NavigationBar
+   - Logo
+   - Navigation links
+   - User profile dropdown
+   - Mobile hamburger menu
+
+7. Footer
+   - Links
+   - Contact info
+   - Social media
+
+Use:
+- Shadcn/UI components
+- Tailwind CSS
+- Modern design
+- Smooth animations
+- Accessibility features
+
+For each component, provide:
+- Full JSX code
+- Tailwind styling
+- TypeScript props
+- Usage examples
+```
+## PHASE 7: Testing & Quality (GEMINI)
+
+### PROMPT 16: Testing Strategy
+```text
+What testing strategy should I use for my German learning app?
+
+Provide:
+1. Unit tests (for critical functions)
+   - Example tests for auth
+   - Example tests for exercises
+   
+2. Integration tests
+   - Test full user flows
+   - Login → take lesson → complete exercise → see progress
+   
+3. E2E tests
+   - Full user journey tests
+   
+4. Test tools recommendation
+   - Frontend testing (Vitest, React Testing Library)
+   - Backend testing (Jest)
+   
+5. Test data setup
+   - Seed test database
+   - Mock data
+   
+6. CI/CD testing
+   - Run tests on GitHub push
+   - Fail if tests don't pass
+   - Deploy only if tests pass
+
+Provide 3-4 example test files.
 
 ```
-### 📄 File Reference
-PHASE ( 7 ) Testing & Quality (GEMINI)/2.Future Road map and ideas.md
-### 🎯 Engineering Prompt
+
+### PROMPT 17: Feature Ideas & Roadmap
+
 ```text
+What features should I add to my German learning platform after MVP?
 
+Suggest ideas for:
+1. Gamification (badges, achievements, leaderboard)
+2. Social features (friend list, challenges)
+3. Content features (pronunciation guide, grammar notes)
+4. Analytics (learning insights, recommendations)
+5. Mobile app (React Native)
+6. AI tutor (ChatGPT integration for personalized help)
+7. Community (forums, Q&A)
+8. Premium features
+9. Partnerships (universities, schools)
 
+For each feature:
+- Complexity (Easy/Medium/Hard)
+- Time to build (hours)
+- Revenue potential
+- User impact
+
+Also suggest which features to prioritize for scale.
 ```
