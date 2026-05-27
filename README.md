@@ -1,8 +1,33 @@
 # 📑 MASTER PROMPT ARCHITECTURE: GERMAN LEARNING APP
-This master document compiles your entire phase-by-phase development 
-workflow into a highly readable, vertical orientation. Every prompt is 
-isolated inside structured, narrow boxes designed specifically to prevent 
-horizontal scrolling on mobile screens.
+This master document compiles your entire phase-by-phase development
+
+
+
+# MAIN ARCHITECTURE OF THIS PROJECT:
+┌─────────────────────────────────────────────┐
+│                                                     │
+│  CLAUDE (Main) - Architecture + Full Code           │
+│  "You are here" - Primary coder for full-stack      │
+│                                                     │
+├───────────────────────────────────────-─────┤
+│                                                     │
+│  GEMINI - Brainstorming + Alternatives              │
+│  Quick ideas, features, testing strategies          │
+│                                                     │
+├───────────────────────────────────-─────────┤
+│                                                     │
+│  V0.DEV - UI Components                             │
+│  Beautiful React components with Shadcn/UI          │
+│                                                     │
+├─────────────────────────────────────────────┤
+│                                                     │
+│  GitHub Copilot - Real-time Code Assist (Optional)  │
+│  In-editor suggestions while you code               │
+│                                                     │
+└─────────────────────────────────────────────┘
+
+
+
 ## 🏗️ PHASE 0: Project Setup & Architecture
 ### 📄 File Reference
 PHASE ( 0 )Project Setup & Architecture/1.MAIN ARCHITECTURE.md
