@@ -35,13 +35,21 @@ Using GitHub.dev (No installation needed):
 
 
 STEP 1: Go to github.com/yourname/repo
+
 STEP 2: Press '.' (dot) on keyboard
+
 STEP 3: VS Code opens in browser!
+
 STEP 4: Edit files in the editor
+
 STEP 5: Commit from Source Control tab
+
 STEP 6: Push to main
+
 STEP 7: Render auto-deploys (5 min)
+
 STEP 8: Test at https://your-app.onrender.com
+
 
 
 
