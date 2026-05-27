@@ -136,7 +136,7 @@ DAY 11+ (POLISH):
 
 ## PROMPT DISTRIBUTION MAP 🗺️-
 
-
+```text
 
 PHASE 1: SETUP
 ├─ PROMPT 1 → CLAUDE (Project structure)
@@ -170,7 +170,7 @@ PHASE 7: UI POLISH
 PHASE 8: QUALITY & GROWTH
 ├─ PROMPT 16 → GEMINI (Testing strategy)
 └─ PROMPT 17 → GEMINI (Feature ideas)
-
+```
 
 
 ## 🏗️ PHASE 0: Project Setup & Architecture
