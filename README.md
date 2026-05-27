@@ -47,16 +47,36 @@ STEP 8: Test at https://your-app.onrender.com
 
 Using Termux (Android):
 
-```$ apt update && apt upgrade -y```
-```$ apt install git nodejs npm```
-```$ git clone your-repo```
-```$ cd german-learning-app/frontend```
-``$ npm install``
-```$ npm run dev (to test locally)```
-```$ git add .```
-```$ git commit -m "Add feature"```
-```$ git push origin main```
-```(Render auto-deploys)```
+```text
+$ apt update && apt upgrade -y
+```
+```trxt
+$ apt install git nodejs npm
+```
+```text
+$ git clone your-repo
+```
+```text
+$ cd german-learning-app/frontend
+```
+```text
+$ npm install
+```
+```text
+$ npm run dev (to test locally)
+```
+```text
+$ git add .
+```
+```text
+$ git commit -m "Add feature"
+```
+```text
+$ git push origin main
+```
+```text
+(Render auto-deploys)
+```
 
 
 
