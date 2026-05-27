@@ -1,101 +1,463 @@
-To compile all your phase-by-phase prompt requirements from your LEARNGERMAN.zip file map into a single, master file layout according to the **PROMPT DISTRIBUTION MAP.md** workflow, we can structure it sequentially.
-This master document acts as a continuous engineering instruction file. You can pass sections of this directly to an AI tool (like Claude, Cursor, or Gemini) during your **Vibe Coding** or **Mobile Development** sessions.
 # 📑 MASTER PROMPT ARCHITECTURE: GERMAN LEARNING APP
-This single document compiles the operational design prompts, validation rules, and deployment instructions mapped out across all development cycles. Use these precise prompts to instruct your AI coding assistants sequentially.
+This master document compiles your entire phase-by-phase development 
+workflow into a highly readable, vertical orientation. Every prompt is 
+isolated inside structured, narrow boxes designed specifically to prevent 
+horizontal scrolling on mobile screens.
 ## 🏗️ PHASE 0: Project Setup & Architecture
-### 📄 File Reference: PHASE ( 0 )Project Setup & Architecture/1.MAIN ARCHITECTURE.md
-```markdown
-PROMPT: Act as a Principal Software Architect. Define a comprehensive technical architecture blueprint for a full-stack German language learning platform. The system must support user onboarding, structured video/text lessons, interactive grammatical exercises, real-time feedback loops, progress tracking dashboards, and scalable API routing. Provide the definitive tech stack configuration, global directory structures (monorepo format), code splitting parameters, environment variable management guidelines, and state management architectural patterns optimized for low-latency client performance.
+### 📄 File Reference
+PHASE ( 0 )Project Setup & Architecture/1.MAIN ARCHITECTURE.md
+### 🎯 Engineering Prompt
+```text
+┌──────────────────────────────────────┐
+│ ACT AS:                              │
+│ Principal Software Architect         │
+│                                      │
+│ TASK:                                │
+│ Define a comprehensive technical     │
+│ architecture blueprint for a full-   │
+│ stack German language learning       │
+│ platform.                            │
+│                                      │
+│ SYSTEM REQUIREMENTS:                 │
+│ 1. User onboarding infrastructure    │
+│ 2. Structured video/text lessons     │
+│ 3. Interactive grammar exercises     │
+│ 4. Real-time feedback loops          │
+│ 5. Progress tracking dashboards      │
+│ 6. Scalable, secure API routing      │
+│                                      │
+│ EXPECTED OUTPUTS:                    │
+│ * Definitive tech stack selections   │
+│ * Global monorepo structures         │
+│ * Code splitting parameters          │
+│ * Environment variable structures    │
+│ * State management architecture      │
+│   optimized for ultra-low latency    │
+│   client response profiles           │
+└──────────────────────────────────────┘
 
 ```
-### 📄 File Reference: PHASE ( 0 )Project Setup & Architecture/2.initialsetup(claude).md
-```markdown
-PROMPT: Act as a Senior DevOps Engineer. Generate a precise initialization script and step-by-step setup guide using the technical baseline established in the main architecture. Initialize a backend server workspace and a frontend application environment. Configure all structural dependency files, root configs (TypeScript/tsconfig, ESLint, Prettier, EditorConfig, Tailwind configs), package configurations, and initial environmental variables hooks. Ensure everything compiles with zero warnings and absolute configuration strictness.
+### 📄 File Reference
+PHASE ( 0 )Project Setup & Architecture/2.initialsetup(claude).md
+### 🎯 Engineering Prompt
+```text
+┌──────────────────────────────────────┐
+│ ACT AS:                              │
+│ Senior DevOps Engineer               │
+│                                      │
+│ TASK:                                │
+│ Generate a precise initialization    │
+│ script and structural deployment     │
+│ guide using the baseline technical   │
+│ architecture design.                 │
+│                                      │
+│ SYSTEM REQUIREMENTS:                 │
+│ 1. Initialize backend server space   │
+│ 2. Initialize frontend workspace     │
+│ 3. Configure root dependencies       │
+│                                      │
+│ CONFIGURATIONS TO INCLUDE:           │
+│ * TypeScript (tsconfig.json)         │
+│ * ESLint & Prettier rules            │
+│ * EditorConfig specifications        │
+│ * Tailwind CSS theme setups          │
+│ * Initial environment variable       │
+│   injection hooks                    │
+│                                      │
+│ VALIDATION CRITERIA:                 │
+│ Code must compile with zero warnings │
+│ and strict typing patterns.          │
+└──────────────────────────────────────┘
 
 ```
-### 📄 File Reference: PHASE ( 0 )Project Setup & Architecture/3.Db Schema (Claude).md
-```markdown
-PROMPT: Act as a Lead Database Administrator. Write a production-ready relational database schema model for a German learning platform using a modern ORM syntax. Define specific entity relationships, primary/foreign key mappings, explicit indexes, and cascade constraints for the following tables: Users, Profiles, UserProgress, Courses, Modules, Lessons, Exercises, Submissions, Quizzes, and AuditLogs. Ensure strict data integrity, type safety, optimized query structures for fast relational traversal, and provide the initial database migration configuration scripts.
+### 📄 File Reference
+PHASE ( 0 )Project Setup & Architecture/3.Db Schema (Claude).md
+### 🎯 Engineering Prompt
+```text
+┌──────────────────────────────────────┐
+│ ACT AS:                              │
+│ Lead Database Administrator          │
+│                                      │
+│ TASK:                                │
+│ Write a production-ready relational  │
+│ schema model for the German learning │
+│ platform using modern ORM syntax.    │
+│                                      │
+│ TARGET DATA TABLES:                  │
+│ 1. Users & Profiles                  │
+│ 2. UserProgress & AuditLogs          │
+│ 3. Courses, Modules & Lessons        │
+│ 4. Exercises & Submissions           │
+│ 5. Quizzes                           │
+│                                      │
+│ SCHEMA REQUIREMENTS:                 │
+│ * Explicit table relationships       │
+│ * Primary & foreign key mappings     │
+│ * Performance-tuned indexes          │
+│ * Strict cascade constraints         │
+│ * Data integrity & type safety       │
+│ * Initial migration configurations   │
+└──────────────────────────────────────┘
 
 ```
 ## 🔐 PHASE 1: Authentication System
-### 📄 File Reference: PHASE ( 1) Authentication System/1.Auth sys(Claude).md
-```markdown
-PROMPT: Act as a Senior Security Engineer. Build a robust backend and frontend authentication flow. Implement secure registration, login, and token-based session lifecycle management utilizing standard security layers (e.g., JWT securely managed via HTTP-only cookies or encrypted local storage wrappers). Include middleware for role-based route access controls (Admin vs. Student), strict input sanitation templates, automated password hashing logic with secure salts, and complete payload schemas for user validation handling.
+### 📄 File Reference
+PHASE ( 1) Authentication System/1.Auth sys(Claude).md
+### 🎯 Engineering Prompt
+```text
+┌──────────────────────────────────────┐
+│ ACT AS:                              │
+│ Senior Security Engineer             │
+│                                      │
+│ TASK:                                │
+│ Build a robust backend and frontend  │
+│ user authentication flow.            │
+│                                      │
+│ CORE FEATURES:                       │
+│ 1. Secure registration pipeline      │
+│ 2. Secure login infrastructure       │
+│ 3. Token lifecycle management        │
+│                                      │
+│ SECURITY PROTOCOLS:                  │
+│ * Secure JWT architecture            │
+│ * HTTP-only cookie storage or        │
+│   encrypted local storage sets       │
+│ * Role-Based Access Control (RBAC)   │
+│   middleware (Admin vs Student)      │
+│ * Inputs sanitation layers           │
+│ * Salted password hashing logic      │
+│ * Validation payload schemas         │
+└──────────────────────────────────────┘
 
 ```
-### 📄 File Reference: PHASE ( 1) Authentication System/2.AUTH TEST AND SECURITY(Claude).md
-```markdown
-PROMPT: Act as a QA Security Tester. Write a unit and integration test suite designed exclusively to stress-test the authentication system. Implement testing logic to catch security vulnerabilities including invalid JWT structures, token expiration edge cases, credential brute-forcing mitigation handling, cross-site scripting (XSS) via auth inputs, and SQL Injection/NoSQL payload bypass attempts. Ensure mock response patterns return correct error schemas and status assertions.
+### 📄 File Reference
+PHASE ( 1) Authentication System/2.AUTH TEST AND SECURITY(Claude).md
+### 🎯 Engineering Prompt
+```text
+┌──────────────────────────────────────┐
+│ ACT AS:                              │
+│ QA Security Tester                   │
+│                                      │
+│ TASK:                                │
+│ Write an automated integration and   │
+│ unit test suite to stress-test the   │
+│ authentication system layer.         │
+│                                      │
+│ VULNERABILITY TARGETS:               │
+│ 1. Malformed/invalid JWT structures  │
+│ 2. Token expiration edge cases       │
+│ 3. Brute-force entry attempts        │
+│ 4. XSS scripts via inputs            │
+│ 5. SQL/NoSQL injections              │
+│                                      │
+│ VALIDATION CRITERIA:                 │
+│ Assert correct failure codes, error  │
+│ responses, and payload response      │
+│ schemas across all scenarios.        │
+└──────────────────────────────────────┘
 
 ```
 ## 📚 PHASE 2: Courses & Lessons System
-### 📄 File Reference: PHASE ( 2 ) Courses & Lessons/1.Courses Backend.md
-```markdown
-PROMPT: Act as a Senior Backend Developer. Develop the relational API endpoints for a multi-tiered German learning structure: Courses -> Levels (A1, A2, B1) -> Modules -> Lessons. Build high-performance, paginated query controllers to retrieve lessons with their respective completion statuses, alongside structural administrative endpoints allowing content managers to programmatically create, read, update, and delete course nodes.
+### 📄 File Reference
+PHASE ( 2 ) Courses & Lessons/1.Courses Backend.md
+### 🎯 Engineering Prompt
+```text
+┌──────────────────────────────────────┐
+│ ACT AS:                              │
+│ Senior Backend Developer             │
+│                                      │
+│ TASK:                                │
+│ Develop high-performance relational  │
+│ API endpoints for the educational    │
+│ routing architecture.                │
+│                                      │
+│ ARCHITECTURE PATHWAY:                │
+│ Courses ➔ Levels (A1/A2/B1) ➔        │
+│ Modules ➔ Lessons                    │
+│                                      │
+│ LOGIC REQUIRED:                      │
+│ * Paginated data query controllers   │
+│ * User progress tracking flags       │
+│ * Lesson status maps (Completed/     │
+│   In-Progress/Locked)                │
+│ * Full administrative CRUD routes    │
+│   for dynamic content creation       │
+└──────────────────────────────────────┘
 
 ```
-### 📄 File Reference: PHASE ( 2 ) Courses & Lessons/2.Lessons System.md
-```markdown
-PROMPT: Act as a Frontend Engineer. Create an immersive, component-driven Lesson View system interface. It must render diverse content types including text definitions, embedded markdown audio components for pronounciation, video playback containers, and vocabulary glossary highlights. Implement persistent local progress synchronization tracking to update the backend the moment a user completes or marks a specific lesson node.
+### 📄 File Reference
+PHASE ( 2 ) Courses & Lessons/2.Lessons System.md
+### 🎯 Engineering Prompt
+```text
+┌──────────────────────────────────────┐
+│ ACT AS:                              │
+│ Frontend Engineer                    │
+│                                      │
+│ TASK:                                │
+│ Create an immersive, component-      │
+│ driven user interface for the main   │
+│ Lesson View screen.                  │
+│                                      │
+│ RENDER CAPABILITIES:                 │
+│ 1. Rich text descriptions            │
+│ 2. Embedded Markdown engines         │
+│ 3. Native audio players (for pronunciation)│
+│ 4. Video media playback boxes        │
+│ 5. Vocabulary glossary definitions   │
+│                                      │
+│ APPLICATION STATE LOGIC:             │
+│ Build immediate, persistent client-  │
+│ to-server sync hooks that save progress│
+│ whenever a user finishes a module.   │
+└──────────────────────────────────────┘
 
 ```
 ## 📝 PHASE 3: Exercises & Quizzes
-### 📄 File Reference: PHASE ( 3 ) Exercises & Quizzes/1.Exercise System.md
-```markdown
-PROMPT: Act as an Educational UX Developer. Build an interactive interactive exercise engine tailored specifically to foreign language acquisition. Implement state machine loops to run and evaluate three distinct interactive question variations: 
-1. Multiple Choice Questions (MCQ).
-2. Fill-in-the-blanks with inline textual entry.
-3. Sentence reorganization via interactive drag-and-drop mechanics.
-Provide immediate validation UI feedback handling (Green/Success or Red/Error) along with clear grammatical correction tips on incorrect user evaluation inputs.
+### 📄 File Reference
+PHASE ( 3 ) Exercises & Quizzes/1.Exercise System.md
+### 🎯 Engineering Prompt
+```text
+┌──────────────────────────────────────┐
+│ ACT AS:                              │
+│ Educational UX Developer             │
+│                                      │
+│ TASK:                                │
+│ Build an interactive exercise engine │
+│ optimized for language retention.    │
+│                                      │
+│ EXERCISE VARIATIONS:                 │
+│ 1. Standard Multiple Choice (MCQ)    │
+│ 2. Fill-in-the-Blanks text entry     │
+│ 3. Interactive word reordering drag- │
+│    and-drop block interfaces         │
+│                                      │
+│ UI EVALUATION FEEDBACK:              │
+│ * Instant state changes (Success-    │
+│   Green / Error-Red graphics)        │
+│ * Inline context tooltips displaying │
+│   grammatical corrections upon fault │
+└──────────────────────────────────────┘
 
 ```
-### 📄 File Reference: PHASE ( 3 ) Exercises & Quizzes/2.Quiz System.md
-```markdown
-PROMPT: Act as a Core Logic Systems Engineer. Create a high-stakes, time-boxed Module Quiz System engine. Implement a client-side and server-validated countdown timer mechanism, an active exam progress save hook, sequential step-by-step submission logic, and an automated grading evaluator backend function. Once a quiz concludes, calculate precise score percentages, total time spent, and output a granular grading performance card to the database storage.
+### 📄 File Reference
+PHASE ( 3 ) Exercises & Quizzes/2.Quiz System.md
+### 🎯 Engineering Prompt
+```text
+┌──────────────────────────────────────┐
+│ ACT AS:                              │
+│ Core Logic Systems Engineer          │
+│                                      │
+│ TASK:                                │
+│ Engineer a high-stakes, time-boxed   │
+│ Module Quiz System.                  │
+│                                      │
+│ SYSTEM SPECIFICATIONS:               │
+│ 1. Secure client countdown timers    │
+│ 2. Server-side validation tickers    │
+│ 3. Live quiz progress caching        │
+│ 4. Strict step submission engines    │
+│ 5. Auto-grading database script      │
+│                                      │
+│ FINAL MATRIX GENERATION:             │
+│ Compute precise final scores, run-   │
+│ time duration logs, and output a     │
+│ granular database assessment card.   │
+└──────────────────────────────────────┘
 
 ```
 ## 📊 PHASE 4: Dashboard & User Profiles
-### 📄 File Reference: PHASE ( 4 ) Dashboard & User Profile/1.Dashboard System.md
-```markdown
-PROMPT: Act as a Full-Stack Product Developer. Build the primary Student Progress Dashboard. Aggregate multi-source data insights to visually calculate and render the active user metrics: Overall Course Progress Percentages, Current Day Streak Trackers, Lesson/Quiz Completion Counts, and an Interactive Daily Activity Heatmap grid. Ensure data fetching hooks leverage smart caching layers to minimize duplicate database load on page initialization.
+### 📄 File Reference
+PHASE ( 4 ) Dashboard & User Profile/1.Dashboard System.md
+### 🎯 Engineering Prompt
+```text
+┌──────────────────────────────────────┐
+│ ACT AS:                              │
+│ Full-Stack Product Developer         │
+│                                      │
+│ TASK:                                │
+│ Build the primary student activity   │
+│ and tracking dashboard system.       │
+│                                      │
+│ DATA INTERFACES TO RENDER:           │
+│ 1. Overall progress percentages      │
+│ 2. Daily check-in streak counters    │
+│ 3. Total complete lesson summaries   │
+│ 4. Interactive contribution activity │
+│    heatmap timeline grids            │
+│                                      │
+│ SPEED REQUIREMENT:                   │
+│ Implement aggressive backend caching │
+│ layers to ensure page initialization │
+│ runs with low server-side loads.     │
+└──────────────────────────────────────┘
 
 ```
-### 📄 File Reference: PHASE ( 4 ) Dashboard & User Profile/2.User Profile.md
-```markdown
-PROMPT: Act as a UI Layout Specialist. Create the User Settings and Profile Panel interface. Design distinct interactive modular sub-sections: Profile Detail Updates (Avatar, name, email handling), Language Selection Goals, Application Theme Customization switches (Light vs Dark mode persistent toggles), and Account Data Management access points (Password changes or account deletions). Connect all update fields to direct operational database mutation endpoints.
+### 📄 File Reference
+PHASE ( 4 ) Dashboard & User Profile/2.User Profile.md
+### 🎯 Engineering Prompt
+```text
+┌──────────────────────────────────────┐
+│ ACT AS:                              │
+│ UI Layout Specialist                 │
+│                                      │
+│ TASK:                                │
+│ Create the main interactive settings │
+│ panel and user profile manager.      │
+│                                      │
+│ CONTROL BLOCKS REQUIRED:             │
+│ 1. Profile information modifiers     │
+│    (Avatars, text tags, emails)      │
+│ 2. Language target threshold updates │
+│ 3. App-wide light/dark mode triggers │
+│ 4. Core account self-service flags   │
+│    (Password resets, wiping files)   │
+│                                      │
+│ DATA REUREMENT:                      │
+│ Wire all interaction fields directly │
+│ to secure database mutation loops.   │
+└──────────────────────────────────────┘
 
 ```
 ## 🚀 PHASE 5: Deployment & Optimization
-### 📄 File Reference: PHASE ( 5 ) Deployment & Polish/1.Deploy to Render.md
-```markdown
-PROMPT: Act as an Infrastructure Specialist. Write the declarative runtime build configurations, deploy manifests, and production orchestration parameters necessary to safely host the application stack on Render. Produce automated shell build commands, target base package script triggers, reverse proxy routing rules, cluster environment handling scripts, and production environment health check endpoint definitions.
+### 📄 File Reference
+PHASE ( 5 ) Deployment & Polish/1.Deploy to Render.md
+### 🎯 Engineering Prompt
+```text
+┌──────────────────────────────────────┐
+│ ACT AS:                              │
+│ Infrastructure Specialist            │
+│                                      │
+│ TASK:                                │
+│ Write declarative configurations,    │
+│ deployment manifests, and system      │
+│ parameters to host the app on Render.│
+│                                      │
+│ DELIVERABLES:                        │
+│ * Production shell build commands    │
+│ * Start-up package script controls   │
+│ * Port reverse proxy routing rules   │
+│ * Multi-cluster memory allocation    │
+│ * Automated API health check routes  │
+└──────────────────────────────────────┘
 
 ```
-### 📄 File Reference: PHASE ( 5 ) Deployment & Polish/2.Performance & Optimization.md
-```markdown
-PROMPT: Act as a Web Performance Engineer. Audit and optimize the system workflow layers. Implement client-side asset optimization protocols, dynamic code-splitting and component lazy-loading layouts, aggressive static data caching mechanisms, network compression utilities, and strategic database connection pooling models to drop Time-to-First-Byte (TTFB) and secure a perfect score across standard web performance metrics.
+### 📄 File Reference
+PHASE ( 5 ) Deployment & Polish/2.Performance & Optimization.md
+### 🎯 Engineering Prompt
+```text
+┌──────────────────────────────────────┐
+│ ACT AS:                              │
+│ Web Performance Engineer             │
+│                                      │
+│ TASK:                                │
+│ Audit, trace, and speed-optimize     │
+│ all global runtime paths.            │
+│                                      │
+│ TACTICS TO IMPLEMENT:                │
+│ 1. Asset compression protocols       │
+│ 2. Dynamic client-side code splitting │
+│ 3. Component lazy-loading wrappers   │
+│ 4. Global browser data caching       │
+│ 5. DB connection pooling models      │
+│                                      │
+│ OBJECTIVE:                           │
+│ Minimize Time-to-First-Byte (TTFB)   │
+│ to guarantee high speed on mobile.   │
+└──────────────────────────────────────┘
 
 ```
-### 📄 File Reference: PHASE ( 5 ) Deployment & Polish/3.Error Handling & Logging.md
-```markdown
-PROMPT: Act as a Site Reliability Engineer (SRE). Engineer an uncompromising global error management layer. Write functional central Try-Catch middleware systems for asynchronous runtime paths, customized exception classes reflecting accurate protocol fault conditions, production-grade console logger formats, and explicit fallbacks to ensure client-facing applications never crash or expose raw source stack traces during operational exceptions.
+### 📄 File Reference
+PHASE ( 5 ) Deployment & Polish/3.Error Handling & Logging.md
+### 🎯 Engineering Prompt
+```text
+┌──────────────────────────────────────┐
+│ ACT AS:                              │
+│ Site Reliability Engineer (SRE)      │
+│                                      │
+│ TASK:                                │
+│ Engineer a comprehensive, centralized │
+│ runtime exception catching system.   │
+│                                      │
+│ ARCHITECTURAL CORES:                 │
+│ 1. Unified try-catch wrapper logic   │
+│ 2. Custom typed application faults   │
+│ 3. Production terminal log formatters│
+│ 4. Client error UI fallback boundaries│
+│                                      │
+│ CONSTRAINT:                          │
+│ Never expose raw server stack traces │
+│ or infrastructure directories to the │
+│ end-user application logs.           │
+└──────────────────────────────────────┘
 
 ```
 ## 🎨 PHASE 6: UI Components
-### 📄 File Reference: PHASE ( 6 ) UI Components (V0.DEV)/Beautiful UI Components.md
-```markdown
-PROMPT: Act as a UI/UX Designer specialized in v0.dev prompt engineering. Provide highly descriptive component styling blueprints utilizing Tailwind CSS tokens and semantic tokens. Deliver structured component interface syntax guidelines for producing premium UI layouts: custom-molded dark-glass language select containers, side navigation blocks with fluid micro-interactions, floating flashcard action cards, and responsive modal screens built to adhere strictly to WCAG modern accessible color standards.
+### 📄 File Reference
+PHASE ( 6 ) UI Components (V0.DEV)/Beautiful UI Components.md
+### 🎯 Engineering Prompt
+```text
+┌──────────────────────────────────────┐
+│ ACT AS:                              │
+│ UI/UX Prompt Engineer (v0.dev Expert)│
+│                                      │
+│ TASK:                                │
+│ Provide programmatic design schemas   │
+│ using Tailwind CSS utilities.        │
+│                                      │
+│ DESIGN ELEMENTS TO BUILD:            │
+│ 1. Dark-glass language containers    │
+│ 2. Micro-interactive layout sidebars │
+│ 3. Smooth animated study flashcards  │
+│ 4. Highly accessible responsive modals│
+│                                      │
+│ COMPLIANCE FACTOR:                   │
+│ Color palettes and text contrasts    │
+│ must adhere strictly to standard     │
+│ accessible WCAG readability rules.   │
+└──────────────────────────────────────┘
 
 ```
 ## 🧪 PHASE 7: Testing & Quality Assurance
-### 📄 File Reference: PHASE ( 7 ) Testing & Quality (GEMINI)/1.Testing Strategy.md
-```markdown
-PROMPT: Act as a QA Lead Engineer. Design the master Quality Assurance automation matrix. Write end-to-end user flows, execution steps, and integration target criteria to safely evaluate the platform's stability. Build execution code to automate test paths for: Completing a lesson module path successfully, evaluating edge cases on mismatched password logic inputs, checking persistence layer integrity across intentional disconnections, and testing responsive mobile layout breaks.
+### 📄 File Reference
+PHASE ( 7 ) Testing & Quality (GEMINI)/1.Testing Strategy.md
+### 🎯 Engineering Prompt
+```text
+┌──────────────────────────────────────┐
+│ ACT AS:                              │
+│ QA Lead Engineer                     │
+│                                      │
+│ TASK:                                │
+│ Architect the system end-to-end user │
+│ flow automation matrices.            │
+│                                      │
+│ TARGET TEST SEQUENCES:               │
+│ 1. Happy path: User finishes lesson  │
+│ 2. Validation: Mismatched keys/auth  │
+│ 3. State integrity during networks   │
+│    dropping unexpectedly             │
+│ 4. Layout integrity tests across      │
+│    extreme responsive screen breaks  │
+└──────────────────────────────────────┘
 
 ```
-### 📄 File Reference: PHASE ( 7 ) Testing & Quality (GEMINI)/2.Future Road map and ideas.md
-```markdown
-PROMPT: Act as an EdTech Product Visionary. Formulate an extensive version 2.0 product architecture enhancement feature backlog. Map explicit conceptual feature schemas, design strategies, and algorithmic interface logic for integrating future modules including: Gamified Badge/Reward point mechanics, Real-time peer-to-peer vocabulary leaderboards, Contextual AI-driven dialogue partner instances, and Intelligent Spaced-Repetition Review algorithms (SRS) designed to surface older flashcards right before failure points.
+### 📄 File Reference
+PHASE ( 7 ) Testing & Quality (GEMINI)/2.Future Road map and ideas.md
+### 🎯 Engineering Prompt
+```text
+┌──────────────────────────────────────┐
+│ ACT AS:                              │
+│ EdTech Product Visionary             │
+│                                      │
+│ TASK:                                │
+│ Formulate the post-launch Version 2.0│
+│ scale backlog and module roadmap.    │
+│                                      │
+│ EXTENSION SCENARIOS:                 │
+│ 1. Gamification badge frameworks     │
+│ 2. Live user-to-user leaderboards    │
+│ 3. Conversational AI speaking bots   │
+│ 4. Spaced-Repetition flashcard       │
+│    intervals (SRS learning logic)    │
+└──────────────────────────────────────┘
 
 ```
