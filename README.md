@@ -175,26 +175,156 @@ PHASE 8: QUALITY & GROWTH
 
 ## 🏗️ PHASE 0: Project Setup & Architecture
 
-### 🎯 Engineering Prompt
+### PROMPT 1: Initial Setup & Project Structure
 ```text
+I'm building a German language learning website for international 
+students using React, Node.js, and PostgreSQL on Render.
 
+I need you to:
+
+1. Create the complete project structure for my repo
+2. Generate render.yaml for deployment
+3. Create Prisma schema for German learning platform
+4. Generate package.json for both frontend and backend
+5. Create .env.example files
+6. Generate initial Express server setup
+7. Create React + Vite initial setup
+8. Provide all necessary configuration files
+
+Project details:
+- Frontend: React + Vite + Tailwind + Shadcn UI
+- Backend: Node.js + Express + Prisma
+- Database: PostgreSQL (Render)
+- Hosting: Render (free tier initially)
+- Mobile development: GitHub.dev + Termux
+
+Include TypeScript support and modern best practices.
+Please provide each file separately so I can create them one by one.
 
 ```
-### 📄 File Reference
-PHASE ( 0 )Project Setup & Architecture/3.Db Schema (Claude).md
-### 🎯 Engineering Prompt
-```text
+CLAUDE WILL GIVE YOU:
+> Complete folder structure
+> render.yaml
+> prisma/schema.prisma
+> package.json (both)
+> .env.example (both)
+> Server setup code
+> Client setup code
 
+
+### PROMPT 2: Database Schema Deep Dive
+```text
+Using the German learning platform schema you created, 
+I need detailed Prisma models for:
+
+1. User (with profile, preferences, native language)
+2. Course (A1-C2 levels)
+3. Lesson (with content, video, audio)
+4. Exercise (multiple types: multiple choice, fill-blank, listening)
+5. Progress tracking
+6. Quiz system
+7. Flashcards (vocabulary)
+8. User statistics
+
+For each model:
+- Add all necessary fields
+- Add relationships
+- Add indexes for performance
+- Add validation
+- Add timestamps (createdAt, updatedAt)
+- Add unique constraints where needed
+
+Also provide:
+- Migration commands
+- Seed file with sample A1 German course data
+- Sample lessons (5-10) with exercises
+
+Make it production-ready with proper constraints.
 
 ```
+CLAUDE WILL GIVE YOU:
+> Complete Prisma schema
+> Seed data file
+> Migration setup
+
+
 ## 🔐 PHASE 1: Authentication System
-### 📄 File Reference
-PHASE ( 1) Authentication System/1.Auth sys(Claude).md
-### 🎯 Engineering Prompt
-```text
 
+
+
+### PROMPT 3: Complete Auth System
+```text
+Build the complete authentication system for my German learning app.
+
+BACKEND (Node.js/Express):
+1. User registration endpoint (POST /api/auth/register)
+   - Email validation
+   - Password hashing (bcrypt)
+   - Input validation
+   - Error handling
+   
+2. User login endpoint (POST /api/auth/login)
+   - Email/password verification
+   - JWT token generation
+   - Refresh token logic
+   - Error messages
+   
+3. JWT verification middleware
+   - Check token validity
+   - Extract user from token
+   - Protect routes
+   
+4. Password reset flow (optional but include)
+
+FRONTEND (React):
+1. Register page component
+   - Email input
+   - Password input
+   - Password confirmation
+   - Submit button
+   - Link to login
+   - Form validation
+   - Error messages
+   - Loading state
+   
+2. Login page component
+   - Email/password inputs
+   - "Remember me" checkbox
+   - Submit button
+   - Forgot password link
+   - Link to register
+   - Error messages
+   - Loading state
+   
+3. useAuth custom hook
+   - Login function
+   - Register function
+   - Logout function
+   - Get current user
+   
+4. Zustand auth store
+   - user state
+   - isLoading state
+   - error state
+   - setUser action
+   - logout action
+
+Include:
+- Full TypeScript types
+- Error handling
+- Loading states
+- Toast notifications
+- Protected route component
+- Password validation rules
+- CORS configuration
+
+Provide each file separately.
 
 ```
+CLAUDE WILL GIVE YOU:
+> Backend: auth routes, controllers, middleware, JWT utils
+> Frontend: Auth pages, hooks, stores, components
+> All TypeScript types
 ### 📄 File Reference
 PHASE ( 1) Authentication System/2.AUTH TEST AND SECURITY(Claude).md
 ### 🎯 Engineering Prompt
