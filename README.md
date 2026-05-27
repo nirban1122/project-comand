@@ -4,27 +4,28 @@ This master document compiles your entire phase-by-phase development
 
 
 # MAIN ARCHITECTURE OF THIS PROJECT:
-┌────────────────────────────────────────┐
-│                                               │
-│  CLAUDE (Main) - Architecture + Full Code     │
-│  "You are here" - Primary coder for full-stack│
-│                                               │
-├─────────────────────────────────────── ┤
-│                                               │
-│  GEMINI - Brainstorming + Alternatives        │
-│  Quick ideas, features, testing strategies    │
-│                                               │
-├───────────────────────────────────—────┤
-│                                               │
-│  V0.DEV - UI Components                       │
-│  Beautiful React components with Shadcn/UI    │
-│                                               │
-├────────────────────────────────────────┤
-│                                               │
+┌─────────────────────────────────────────────────────┐
+│                                                     │
+│  CLAUDE (Main) - Architecture + Full Code          │
+│  "You are here" - Primary coder for full-stack     │
+│                                                     │
+├─────────────────────────────────────────────────────┤
+│                                                     │
+│  GEMINI - Brainstorming + Alternatives             │
+│  Quick ideas, features, testing strategies         │
+│                                                     │
+├─────────────────────────────────────────────────────┤
+│                                                     │
+│  V0.DEV - UI Components                            │
+│  Beautiful React components with Shadcn/UI         │
+│                                                     │
+├─────────────────────────────────────────────────────┤
+│                                                     │
 │  GitHub Copilot - Real-time Code Assist (Optional) │
-│  In-editor suggestions while you code         │
-│                                               │
-└────────────────────────────────────────┘
+│  In-editor suggestions while you code              │
+│                                                     │
+└─────────────────────────────────────────────────────┘
+
 
 
 
