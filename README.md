@@ -203,12 +203,19 @@ Please provide each file separately so I can create them one by one.
 
 ```
 CLAUDE WILL GIVE YOU:
+
 > Complete folder structure
+> 
 > render.yaml
+> 
 > prisma/schema.prisma
+> 
 > package.json (both)
+> 
 > .env.example (both)
+> 
 > Server setup code
+> 
 > Client setup code
 
 
@@ -243,8 +250,11 @@ Make it production-ready with proper constraints.
 
 ```
 CLAUDE WILL GIVE YOU:
+
 > Complete Prisma schema
+> 
 > Seed data file
+> 
 > Migration setup
 
 
@@ -322,73 +332,523 @@ Provide each file separately.
 
 ```
 CLAUDE WILL GIVE YOU:
+
 > Backend: auth routes, controllers, middleware, JWT utils
+> 
 > Frontend: Auth pages, hooks, stores, components
+> 
 > All TypeScript types
-### 📄 File Reference
-PHASE ( 1) Authentication System/2.AUTH TEST AND SECURITY(Claude).md
-### 🎯 Engineering Prompt
-```text
 
+
+
+### PROMPT 4: Auth Testing & Security
+```text
+Before we move forward, review the auth system I'll copy to you:
+
+For security:
+1. Check for SQL injection vulnerabilities
+2. Verify password hashing is correct (bcrypt)
+3. Check JWT secret handling
+4. Verify CORS is properly configured
+5. Check for XSS vulnerabilities in forms
+
+For functionality:
+1. Test login/register flow manually
+2. Check error messages are user-friendly
+3. Verify tokens are properly stored
+4. Check refresh token logic
+
+Suggest improvements and provide fixed versions of any issues.
 
 ```
+### GEMINI (ALTERNATIVE FOR THIS):
+```text
+In Gemini chat, ask:
+"Review my authentication code for security issues 
+and suggest improvements [paste your code]"
+```
+
+
 ## 📚 PHASE 2: Courses & Lessons System
-### 📄 File Reference
-PHASE ( 2 ) Courses & Lessons/1.Courses Backend.md
-### 🎯 Engineering Prompt
+
+
+
+### PROMPT 5: Courses Backend
 ```text
 
+Build the courses system backend for my German learning app.
+
+API Endpoints needed:
+
+1. GET /api/courses
+   - Return all courses (A1, A2, B1, B2, C1, C2)
+   - Include: title, level, description, total lessons, cover image
+   - Include user progress if authenticated
+   - Return: Array of courses
+   
+2. GET /api/courses/:id
+   - Return single course with all details
+   - Include: all lessons count, total hours, difficulty
+   
+3. GET /api/courses/:id/lessons
+   - Return all lessons for a course in order
+   - Include: lesson title, order, is_completed (for user)
+   
+4. POST /api/courses/:id/enroll
+   - Enroll user in course
+   - Create initial progress records
+
+Controllers needed:
+- courseController.js with all logic
+- Proper error handling
+- Validate courseId exists
+- Check user is authenticated (where needed)
+
+Include:
+- SQL queries (through Prisma)
+- Error handling
+- Response formatting
+- Proper HTTP status codes
+```
+CLAUDE WILL GIVE YOU:
+
+> Backend courses routes
+> 
+>courseController.js
+> 
+> Database queries
+> 
+> Error handling
+
+
+### PROMPT 6: Courses Frontend
+```text
+Build the courses listing page for React.
+
+Components needed:
+
+1. CoursesPage.jsx
+   - Fetch all courses on mount
+   - Display in grid (responsive)
+   - Filter by level (A1, A2, B1, etc.)
+   - Show loading state
+   - Show error state
+   - Each course shows: title, level, progress %, button
+
+2. CourseCard.jsx
+   - Display: course title, level, image, progress bar
+   - Click to navigate to course
+   - Show "Continue" if in progress, "Start" if new
+   - Show estimated hours
+   
+3. Integrate with Zustand store
+   - courseStore.js
+   - State: courses array, loading, error, selectedCourse
+   - Actions: fetchCourses, selectCourse
+   
+4. Create hooks
+   - useCourses.js - Custom hook for course operations
+   
+5. Styling
+   - Use Tailwind + Shadcn UI
+   - Mobile responsive
+   - Skeleton loading state
+
+Make it look professional and modern.
 
 ```
-### 📄 File Reference
-PHASE ( 2 ) Courses & Lessons/2.Lessons System.md
-### 🎯 Engineering Prompt
+
+CLAUDE WILL GIVE YOU:
+>
+> All React components
+>
+> Zustand store
+>
+> Custom hooks
+>
+> API calls setup
+>
+> Styling
+
+## 📝 PROMPT 7: Lessons System
 ```text
+Build the lesson page system (where students learn German).
 
+Backend:
 
-```
-## 📝 PHASE 3: Exercises & Quizzes
-### 📄 File Reference
-PHASE ( 3 ) Exercises & Quizzes/1.Exercise System.md
-### 🎯 Engineering Prompt
-```text
+1. GET /api/lessons/:id
+   - Return: title, description, content (HTML), 
+             video URL, audio URL, key vocabulary
+   - Track if user completed this lesson
+   
+2. POST /api/lessons/:id/complete
+   - Mark lesson as completed
+   - Award XP points
+   - Update user progress
+   - Check if all lessons in course complete
+   
+3. GET /api/lessons/:id/exercises
+   - Return exercises for this lesson
 
+Frontend:
+
+1. LessonPage.jsx
+   - Fetch lesson content
+   - Display lesson title, content, images
+   - Embedded video player (YouTube)
+   - Audio player for pronunciation
+   - Key vocabulary section
+   - Exercises section (show exercise cards)
+   - "Mark complete" button
+   - "Next lesson" button
+   - Progress indicator
+   
+2. VideoPlayer.jsx
+   - Embed YouTube videos
+   - Simple controls
+   
+3. AudioPlayer.jsx
+   - Play/pause audio
+   - Show pronunciation guide
+   
+4. VocabularyList.jsx
+   - Display key words with definitions
+   - German word | English translation | Audio
+   
+5. LessonNavigation.jsx
+   - Show current lesson in course
+   - Show next/previous lessons
+   - Progress percentage
+
+Styling:
+- Clean, readable layout
+- Good typography for learning
+- Mobile optimized
 
 ```
 ### 📄 File Reference
 PHASE ( 3 ) Exercises & Quizzes/2.Quiz System.md
 ### 🎯 Engineering Prompt
 ```text
+Build the interactive exercise system.
 
+Backend:
+
+1. GET /api/exercises/:id
+   - Return: exercise details, question, choices (without answers yet)
+   - Include: difficulty, type, XP reward
+   
+2. POST /api/exercises/:id/submit
+   - Accept user's answer
+   - Check if correct
+   - Award XP if correct
+   - Create exercise attempt record
+   - Return: isCorrect, explanation, xpEarned
+   
+3. GET /api/exercises/:id/feedback
+   - Return detailed feedback for submitted answer
+
+Exercise types to support:
+- Multiple choice (1 correct answer)
+- Multiple correct (multiple correct answers)
+- Fill in the blank
+- Translation
+- Listening comprehension
+
+Controllers:
+- exerciseController.js with full logic
+- Answer validation
+- XP calculation
+- Error handling
+
+Frontend:
+
+1. ExercisePage.jsx
+   - Display exercise question
+   - Load and show exercise based on type
+   - Show submission form
+   - Display feedback after submission
+   - Show XP earned
+   - Show "Next exercise" or "Back to lesson"
+   
+2. MultipleChoiceExercise.jsx
+   - Show question
+   - Show radio buttons for each choice
+   - Submit button
+   - Disabled after answer
+   
+3. FillBlankExercise.jsx
+   - Show sentence with blank
+   - Text input for answer
+   - Submit button
+   
+4. TranslationExercise.jsx
+   - Show sentence to translate
+   - Text input
+   - Submit button
+   - Hint button (optional)
+   
+5. ListeningExercise.jsx
+   - Play audio
+   - Show question about audio
+   - Multiple choice options
+   
+6. FeedbackDisplay.jsx
+   - Show if correct/incorrect
+   - Show explanation
+   - Show correct answer if wrong
+   - Show XP earned
+   - Next button
+
+Include:
+- Form validation
+- Loading states
+- Error handling
+- Immediate feedback
+- TypeScript types
+- Accessibility features
 ```
 ## 📊 PHASE 4: Dashboard & User Profiles
 ### 📄 File Reference
 PHASE ( 4 ) Dashboard & User Profile/1.Dashboard System.md
 ### 🎯 Engineering Prompt
 ```text
+Build the course quiz/assessment system.
 
+Backend:
+
+1. GET /api/quizzes
+   - Return all available quizzes
+   
+2. GET /api/quizzes/:id
+   - Return quiz questions without answers
+   - Include: title, description, total questions, time limit
+   
+3. POST /api/quizzes/:id/submit
+   - Accept all answers at once
+   - Calculate score
+   - Check if passed (usually 70%)
+   - Create QuizScore record
+   - Return: final score, passed status, detailed results
+   
+4. GET /api/quizzes/results/:id
+   - Return user's quiz score and details
+
+Frontend:
+
+1. QuizzesPage.jsx
+   - List all available quizzes
+   - Show level, title, attempts, best score
+   - "Start quiz" button
+   
+2. QuizPage.jsx
+   - Display quiz title and instructions
+   - Show timer (if timed)
+   - Display questions one at a time or all
+   - Progress indicator
+   - Submit button at end
+   
+3. QuizQuestion.jsx
+   - Display single question
+   - Show choices/inputs
+   - Next/Previous buttons
+   - Questions counter
+   
+4. QuizResults.jsx
+   - Show final score
+   - Show pass/fail status
+   - Show correct answers for wrong ones
+   - Option to download certificate if passed
+   - Retry button
+   
+5. QuizCertificate.jsx
+   - Generate certificate
+   - Display certificate info
+   - Download/print option
+
+Include:
+- Timer functionality
+- Progress tracking
+- Score calculation
+- Certificate generation (PDF - optional for MVP)
+- Retry logic
 ```
 ### 📄 File Reference
 PHASE ( 4 ) Dashboard & User Profile/2.User Profile.md
 ### 🎯 Engineering Prompt
 ```text
 
+Build the user dashboard (home page after login).
 
+Backend:
+
+1. GET /api/stats
+   - Return user statistics:
+     - Total XP earned
+     - Total lessons completed
+     - Total courses in progress
+     - Courses completed
+     - Learning streak (days)
+     - Current level/progress
+     
+2. GET /api/dashboard
+   - Return: recent courses, current lessons, progress, stats
+   - Personalized recommendations
+
+Frontend:
+
+1. Dashboard.jsx (Home page after login)
+   - Greeting message (Hi, {username}!)
+   - User stats card:
+     - Total XP points (big number)
+     - Lessons completed
+     - Courses in progress
+     - Learning streak
+   - "Continue learning" section:
+     - Show course they're in progress on
+     - Show next lesson to do
+     - Progress bar
+   - "Recommended courses" section:
+     - Show 3-4 recommended courses
+   - Recent activity
+   - Quick start buttons
+   
+2. StatCard.jsx
+   - Display individual stat
+   - Icon + number + label
+   - Animated counter (optional)
+   
+3. ProgressBar.jsx
+   - Show course/lesson progress
+   - Percentage
+   - Visual bar
+   
+4. ContinueLearning.jsx
+   - Show current course
+   - Show next lesson
+   - "Continue" button
+   - Progress info
+   
+5. Recommendations.jsx
+   - Show next recommended course
+   - Why recommended?
+   - "Start course" button
+
+Styling:
+- Dashboard is welcoming and motivating
+- Clear hierarchy
+- Mobile responsive
+- Icons and colors for different courses
 ```
 ## 🚀 PHASE 5: Deployment & Optimization
 ### 📄 File Reference
 PHASE ( 5 ) Deployment & Polish/1.Deploy to Render.md
 ### 🎯 Engineering Prompt
 ```text
-┌──────────────────────────────────────┐
+Build the user profile page.
 
+Backend:
+
+1. GET /api/profile
+   - Return user profile info
+   - Return user statistics
+   - Return completed certificates
+   
+2. PUT /api/profile
+   - Update user profile (name, bio, photo, preferences)
+   
+3. GET /api/profile/certificates
+   - Return all user's certificates/achievements
+
+Frontend:
+
+1. ProfilePage.jsx
+   - User info section:
+     - Profile photo
+     - Name
+     - Email
+     - Native language
+     - Member since
+     - Bio/About
+   - Stats section:
+     - Total XP
+     - Courses completed
+     - Lessons completed
+     - Current streak
+     - Longest streak
+   - Certificates section:
+     - List of completed courses
+     - Download certificate button
+   - Learning preferences
+   - Delete account option
+   
+2. ProfileHeader.jsx
+   - Display profile info
+   - Edit button
+   - Upload photo (optional)
+   
+3. StatsList.jsx
+   - Detailed statistics
+   - Charts (bar chart of courses progress)
+   
+4. CertificatesList.jsx
+   - List all certificates
+   - Download each one
+   - Share certificate (optional)
+   
+5. EditProfileModal.jsx
+   - Edit form for profile
+   - Update button
+   - Cancel button
+
+Include:
+- Form validation
+- File upload for profile photo
+- Success/error messages
+- Loading states
 
 ```
 ### 📄 File Reference
 PHASE ( 5 ) Deployment & Polish/2.Performance & Optimization.md
 ### 🎯 Engineering Prompt
 ```text
+Help me deploy my full-stack German learning app to Render.
 
+I need:
+
+1. Complete render.yaml configuration
+   - Frontend service (React)
+   - Backend service (Node.js)
+   - PostgreSQL database service
+   - Environment variables
+   - Build and start commands
+   
+2. Deployment instructions
+   - Push to GitHub
+   - Connect GitHub to Render
+   - Deploy via blueprint
+   
+3. Environment setup
+   - Production .env variables
+   - Database connection string
+   - JWT secret generation
+   - CORS configuration
+   
+4. Database migration on deploy
+   - Run Prisma migrations automatically
+   - Seed data (optional)
+   
+5. Troubleshooting guide
+   - Common errors and fixes
+   - Logs access
+   - Debugging tips
+
+My repo structure:
+- /frontend (React)
+- /backend (Node.js)
+- Root level render.yaml
+
+Provide complete render.yaml and all necessary configs.
 
 ```
 ### 📄 File Reference
@@ -396,14 +856,78 @@ PHASE ( 5 ) Deployment & Polish/3.Error Handling & Logging.md
 ### 🎯 Engineering Prompt
 ```text
 
+Review my app for performance issues and provide optimization tips.
 
+Areas to review:
+1. Database queries - any N+1 problems?
+2. Frontend bundle size - any unused dependencies?
+3. API response times - any slow endpoints?
+4. Database indexes - are they optimal?
+5. Caching - what should we cache?
+6. Image optimization
+7. Code splitting opportunities
+8. Loading states and skeleton screens
+
+Suggest:
+1. Database query optimizations
+2. Frontend optimizations (lazy loading, code splitting)
+3. API response optimization
+4. Caching strategies
+5. Monitor/logging setup
+6. SEO improvements
+
+Provide code examples for each optimization.
 ```
 ## 🎨 PHASE 6: UI Components
 ### 📄 File Reference
 PHASE ( 6 ) UI Components (V0.DEV)/Beautiful UI Components.md
 ### 🎯 Engineering Prompt
 ```text
+Build comprehensive error handling and logging for my app.
 
+Backend:
+
+1. Error handling middleware
+   - Catch all errors
+   - Format error responses
+   - Log errors
+   - Don't expose sensitive info
+   
+2. Logging setup
+   - Log all API calls
+   - Log errors with stack traces
+   - Log authentication attempts
+   - Log performance metrics
+   
+3. Error types
+   - Validation errors
+   - Auth errors
+   - Database errors
+   - Server errors
+   - Not found errors
+
+Frontend:
+
+1. Global error handling
+   - Catch async errors
+   - Display user-friendly messages
+   - Log errors to backend
+   
+2. Error boundary component
+   - Catch React errors
+   - Display fallback UI
+   
+3. API error handling
+   - Intercept failed requests
+   - Retry logic
+   - User notifications
+
+Provide:
+- Error handling middleware
+- Logger utility
+- Error boundary component
+- Global error handler
+- TypeScript error types
 ```
 ## 🧪 PHASE 7: Testing & Quality Assurance
 ### 📄 File Reference
